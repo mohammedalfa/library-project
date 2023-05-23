@@ -85,3 +85,69 @@ html, body {
   transform: scale(1.2);
   background-color: #29B8DE;
 }
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+  width: 350px;
+  background-color: #fefefe;
+  box-shadow: 0 0 0 100vw rgb(0 0 0 / 15%);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.modal .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .content > form fieldset {
+  border: none;
+}
+
+.modal .content > form label {
+  margin-left: 16px
+}
+
+.modal .content > form input {
+  display: block;
+  margin: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #eee;
+}
+
+.modal .content > form input[type="checkbox"] {
+  display: inline;
+  margin: 8px;
+}
+
+.modal .content form .submit {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal .content form .submit button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 16px;
+  background-color: #19A7CE;
+  color: #fefefe;
+}
+
+.modal .content form .submit button[type="reset"] {
+  background-color: #E76946;
+}
+
+.modal .content form .submit button:hover {
+  transform: scale(1.2);
+}
