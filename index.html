@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <script src="./scripts.js" defer></script>
+  <script src="./script.js" defer></script>
   <title>Library</title>
 </head>
 <body>
@@ -16,66 +16,7 @@
   <div class="content">
     <div class="container">
       <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
-      </div>
-      <div class="card">
+        <img src="https://m.media-amazon.com/images/P/0545582881.01._SCLZZZZZZZ_SX500_.jpg">
         <div class="title"></div>
         <div class="author"></div>
         <div class="pages"></div>
@@ -83,18 +24,18 @@
       </div>
     </div>
     <div class="add-book">
-      <button type="button">+ Add book</button>
+      <button type="button" id="add-book">+ Add book</button>
     </div>
     <div class="modal">
       <div class="content">
         <h1>Add book</h1>
-        <form action="" method="post">
+        <form action="" method="post" id="book-info">
           <fieldset class="information">
-            <input type="text" name="title" id="title" placeholder="Book title">
-            <input type="text" name="author" id="author" placeholder="Author name">
-            <input type="number" name="pages" id="pages" placeholder="Number of pages">
+            <input type="text" name="title" id="title" placeholder="Book title" required>
+            <input type="text" name="author" id="author" placeholder="Author name" required>
+            <input type="number" name="pages" id="pages" placeholder="Number of pages" required>
             <label for="read">Read?:</label>
-            <input type="checkbox" name="read" id="read"></button>
+            <input type="checkbox" name="read" id="read" value="read"></button>
           </fieldset>
           <fieldset class="submit">
             <button type="submit" id="add">Add</button>
