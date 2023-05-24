@@ -31,7 +31,7 @@ function addCard(book) {
   author.classList.add("author");
   pages.classList.add("pages");
   read.classList.add("read");
-  readCheckbox.id = "read-check";
+  readCheckbox.classList.add("read-check");
   removeButton.classList.add("remove");
   image.src = book.image;
   title.textContent = `Title: ${book.title}`;
@@ -41,6 +41,14 @@ function addCard(book) {
   readCheckbox.type = "checkbox";
   removeButton.type = "button";
   removeButton.textContent = "Remove";
+  removeButton.addEventListener("click", (e) => {
+    for (let i = 0; i < myLibrary.length; i++) {
+      if (myLibrary[i].title === e.target.firstChild.textContent) {
+        console.log("hi");
+      }
+    }
+    e.target.parentNode.remove();
+  });
   readCheckbox.checked = +book.read ? true : false;
   read.appendChild(readCheckbox);
   card.append(image, title, author, pages, read, removeButton);
@@ -69,3 +77,13 @@ bookForm.addEventListener("submit", (e) => {
   addCard(bookInfo);
 });
 
+const removeBookButton = document.querySelector(".card .remove");
+removeBookButton.addEventListener("click", (e) => {
+  e.target.parentNode.remove();
+});
+
+const deleteAllButton = document.querySelector(".delete-all");
+deleteAllButton.addEventListener("click", () => {
+  myLibrary = [];
+  cardContainer.innerHTML = "";
+});
