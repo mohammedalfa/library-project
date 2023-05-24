@@ -42,11 +42,6 @@ function addCard(book) {
   removeButton.type = "button";
   removeButton.textContent = "Remove";
   removeButton.addEventListener("click", (e) => {
-    for (let i = 0; i < myLibrary.length; i++) {
-      if (myLibrary[i].title === e.target.firstChild.textContent) {
-        console.log("hi");
-      }
-    }
     e.target.parentNode.remove();
   });
   readCheckbox.checked = +book.read ? true : false;
@@ -75,11 +70,6 @@ bookForm.addEventListener("submit", (e) => {
   cancelButton.click();
   console.log(myLibrary);
   addCard(bookInfo);
-});
-
-const removeBookButton = document.querySelector(".card .remove");
-removeBookButton.addEventListener("click", (e) => {
-  e.target.parentNode.remove();
 });
 
 const deleteAllButton = document.querySelector(".delete-all");
