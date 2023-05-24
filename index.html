@@ -10,17 +10,18 @@
 </head>
 <body>
   <div class="header">
-    <div class="title">library</div>
+    <div class="logo">library</div>
     <button type="button" class="delete-all">Delete all</button>
   </div>
   <div class="content">
     <div class="container">
       <div class="card">
         <img src="https://m.media-amazon.com/images/P/0545582881.01._SCLZZZZZZZ_SX500_.jpg">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="pages"></div>
-        <div class="read"></div>
+        <div class="title">Title: Harry Potter</div>
+        <div class="author">Author: J.K. Rowling</div>
+        <div class="pages">Pages: 298</div>
+        <div class="read">Read: <input type="checkbox" checked></div>
+        <button type="button" class="remove">Remove</button>
       </div>
     </div>
     <div class="add-book">
@@ -31,11 +32,13 @@
         <h1>Add book</h1>
         <form action="" method="post" id="book-info">
           <fieldset class="information">
-            <input type="text" name="title" id="title" placeholder="Book title" required>
-            <input type="text" name="author" id="author" placeholder="Author name" required>
-            <input type="number" name="pages" id="pages" placeholder="Number of pages" required>
+            <input type="text" name="title" id="title" placeholder="Book title*" required>
+            <input type="text" name="author" id="author" placeholder="Author name*" required>
+            <input type="number" name="pages" id="pages" placeholder="Number of pages*" required>
+            <input type="url" name="image" id="image" placeholder="Image URL">
             <label for="read">Read?:</label>
-            <input type="checkbox" name="read" id="read" value="read"></button>
+            <input type="hidden" name="read" value="0">
+            <input type="checkbox" name="read" id="read" value="1">
           </fieldset>
           <fieldset class="submit">
             <button type="submit" id="add">Add</button>
